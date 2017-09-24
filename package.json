@@ -13,6 +13,9 @@
     "url": "https://github.com/mnorelli/d3-framework/"
   },
   "dependencies": {
-    "minimatch": "^3.0.4"
+    "gulp-connect": "^5.0.0",
+    "gulp-ruby-sass": "^2.1.1",
+    "gulp-traceur": "^0.17.2",
+    "gulp-util": "^3.0.8"
   }
 }
