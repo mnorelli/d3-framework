@@ -7,5 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mnorelli/d3-framework/"
+  },
+  "dependencies": {
+    "minimatch": "^3.0.4"
+  }
 }
