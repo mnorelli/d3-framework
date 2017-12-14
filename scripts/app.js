@@ -3,16 +3,29 @@
 console.log("Linked.");
 window.onload = function(){
 
-var main = d3.select("#container")
-    .append("svg")
-    .attr("width", 100)
-    .attr("height", 100); 
+  function draw(data){
+    var sel = d3.select("ul")
+      .selectAll("li")
+      .data(data);
+    sel
+      .enter()
+      .append("li")
+      .text((d)=>
+        `${d.title} (${d.view_count})`);
+  }
 
-  main.append("circle")
-    .style("stroke", "gray")
-    .style("fill", "cyan")
-    .attr("cx", 50)
-    .attr("cy",50)
-    .attr("r",40);
+  var screencasts = [];
+  d3.json('http://tagtree.tv/feed.json'), (data) => {
+    d3.select('#container')
+      .append("ul");
+
+    screencasts = data.sort((a,b)=>
+      b.view_count - a.view_count);
+
+    draw(screencasts);
+  }
+
+
+
 }
 

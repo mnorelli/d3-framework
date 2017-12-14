@@ -3,8 +3,8 @@
 
 
 var gulp = require('gulp'),
-  connect = require('gulp-connect'),
-  traceur = require('gulp-traceur'),
+  connect = require('gulp-connect'),  // host a server with autoreload
+  traceur = require('gulp-traceur'),  // ES6 transpiler
   sass = require('gulp-ruby-sass');
 
 gulp.task('connect', function(){
